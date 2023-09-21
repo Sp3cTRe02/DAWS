@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="id" value="2201b6aa-edf6-456b-8a42-eda1f1b417f3" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft" />
+              <option name="url" value=" http://127.0.0.1:60747/asd/qe&#10; &#10; &#10;" />
+            </requestState>
+            <requestState>
+              <option name="id" value="37ffb4f3-d36f-4e97-a508-578126385de9" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft 1" />
+              <option name="url" value="http://127.0.0.1:9090/10" />
+            </requestState>
+            <requestState>
+              <option name="id" value="43716261-482e-47e8-85cb-34f86a95e6c9" />
+              <option name="method" value="GET" />
+              <option name="name" value="Draft 2" />
+              <option name="url" value="http://127.0.0.1:9090/4" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="id" value="02950b58-a19a-4fff-98df-d7365888eb19" />
+  </component>
+</project>
