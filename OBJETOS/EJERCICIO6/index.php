@@ -30,11 +30,13 @@ if ($requestMethod == 'GET') {
       }elseif (count($argus) == 2) {
           $cod = 200;
           $mes = "OK";
-          $serpientes = Logica::pasarAniosNido($argus[1],$argus[2]);
+          $nido = Factoria::crearNido($argus[2]);
+          $nido = Logica::pasarAniosNido($nido,$argus[1]);
+
           header("HTTP/1.1".$cod.' '.$mes);
           echo json_encode(['cod'=>$cod,
               'message'=>$mes,
-              'data'=>$serpientes]);
+              'data'=>$nido]);
       }
   }
 }else {

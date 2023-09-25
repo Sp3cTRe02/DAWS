@@ -23,7 +23,7 @@ class Conjunto{
      */
     public function setConjunto($conjunto)
     {
-        $this->conjunto = $conjunto;
+        $this->conjuntos = $conjunto;
     }
     // create a function to add a number to the array
 

@@ -1,7 +1,9 @@
 <?php
 class Serpiente{
-    private $anillas = [];
-    private $color = ['r','v','a'];
+    public $anillas = [];
+    public $viva = true;
+    public $color = ['r','v','a'];
+    public $aniosVividos = 0;
 
     public function __construct(){
 
@@ -22,6 +24,12 @@ class Serpiente{
     {
         $this->anillas = $anillas;
     }
+    public function getVida(){
+        return $this->viva;
+    }
+    public function setVida($viva){
+        $this->viva = $viva;
+    }
 
     public function nacer($color){
       $this->anillas = $color;
@@ -30,12 +38,23 @@ class Serpiente{
         array_push($this->anillas, $this->color[rand(0,count($this->color)-1)]);
     }
     public function quitarAnilla(){
-        array_pop($this->anillas);
+        if (sizeof($this->anillas) > 0){
+            array_pop($this->anillas);
+        }else{
+            $this->morir();
+        }
     }
     public function mudar(){
-        array_shift($this->anillas);
+        array_s($this->anillas);
+    }
+    public function getAniosVividos(){
+        return sizeof($this->anillas);
+    }
+    public function pasarAnio(){
+        $this->aniadeAnilla();
     }
     public function morir(){
         $this->anillas = [];
+        $this->viva = false;
     }
 }

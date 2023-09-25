@@ -27,19 +27,22 @@ class Logica{
                     }
                 }
             }
-            $aniosVividos++;
+            $serpiente->pasarAnio();
         }
         return $serpiente;
     }
     public static function pasarAniosNido($nSerpientes, $anios){
-        $serpientes = Factoria::crearVariasSerientes($nSerpientes);
+        $nido = Factoria::crearNido($nSerpientes);
         $aniosVividos = 0;
         while($aniosVividos < $anios){
             $ataqueMangosta = rand(0,10);
             if ($ataqueMangosta == 1) {
-                $serpientes[rand(0,count($serpientes)-1)]->morir();
+                $cuantas = rand(0,4);
+                for($i=0;$i<$cuantas;$i++){
+                    $nido[rand(0,count($nido->serpientes)-1)]->morir();
+                }
             }else{
-                foreach ($serpientes as $serpiente) {
+                foreach ($nido->serpientes as $serpiente) {
                     $anillas = $serpiente->getAnillas();
                     if(sizeof($anillas) < 10){
                         $probabilidad = rand(0,10);
@@ -58,8 +61,8 @@ class Logica{
                     }
                 }
             }
-            $aniosVividos++;
+            $nido->pasarAnio();
         }
-        return $serpientes;
+        return $nido;
     }
 }

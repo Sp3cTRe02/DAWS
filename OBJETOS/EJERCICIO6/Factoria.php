@@ -4,7 +4,7 @@ class Factoria{
 
     public static function crearSerpiente(){
         $serpiente = new Serpiente();
-        $serpiente->nacer(self::$color[rand(0,this->$color.length-1)]);
+        $serpiente->nacer(self::$color[rand(0,(count(self::$color)-1))]);
         return $serpiente;
     }
     public static function crearVariasSerientes($cantidad){
@@ -13,5 +13,10 @@ class Factoria{
             $serpientes[] = self::crearSerpiente();
         }
         return $serpientes;
+    }
+    public static function crearNido($nSerpientes){
+        $nido = new Nido();
+        $nido->setSerpientes(self::crearVariasSerientes($nSerpientes));
+        return $nido;
     }
 }
